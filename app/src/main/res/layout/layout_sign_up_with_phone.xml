@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lin_layout_phone_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/edit_text_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+            android:drawablePadding="@dimen/dimen_4dp"
+            android:drawableTint="@color/colorPrimary"
+            android:hint="Enter your Phone"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/size_16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_get_otp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableRight="@drawable/ic_baseline_navigate_next_24"
+            android:drawableTint="@color/colorWhite"
+            android:text="Get OTP"
+            android:layout_gravity="right"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lin_layout_otp_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_otp_send_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_4dp"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            android:text="We have just send an OTP \n on +91-982928932"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/size_14sp"/>
+
+        <include
+            layout="@layout/layout_otp_view"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/include_or"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_4dp"
+                android:text="Don't get OTP?"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/size_14sp"/>
+
+            <TextView
+                android:id="@+id/text_view_resend_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_4dp"
+                android:text="Please Wait.. 59"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/size_16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp">
+            <TextView
+                android:id="@+id/text_view_change_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_12dp"
+                android:layout_marginRight="40dp"
+                android:drawableLeft="@drawable/ic_baseline_navigate_before_24"
+                android:drawableTint="@color/colorPrimary"
+                android:text="Change Mobile"
+                android:textSize="@dimen/size_16sp"
+                android:textColor="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/button_verify_continue"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_12dp"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/colorPrimary"
+                android:drawableRight="@drawable/ic_baseline_navigate_next_24"
+                android:drawableTint="@color/colorWhite"
+                android:text="Verify &amp; Continue"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

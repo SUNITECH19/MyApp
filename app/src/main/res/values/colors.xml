@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#ff7600</color>
+    <color name="colorPrimaryVariant">#ff7600</color>
+    <color name="colorPrimaryDark">#AC5000</color>
+    <color name="colorAccent">#0073A6</color>
+
+    <color name="colorSecondary">#009688</color>
+    <color name="colorSecondaryVariant">#009688</color>
+
+<!--    <color name="colorPrimary">#00599B</color>-->
+<!--    <color name="colorPrimaryVariant">#00599B</color>-->
+
+<!--    <color name="colorPrimaryDark">#00316C</color>-->
+<!--    <color name="colorPrimaryLight">#4E85CC</color>-->
+
+<!--    <color name="colorSecondary">#B65B00</color>-->
+<!--    <color name="colorSecondaryLight">#EE8938</color>-->
+<!--    <color name="colorSecondaryDrk">#802F00</color>-->
+
+<!--    <color name="colorAccent">#B65B00</color>-->
+
+    <color name="colorWhite">#FCFCFC</color>
+    <color name="colorBlack">#191616</color>
+    <color name="colorLightWhite">#BFFFFFFF</color>
+    <color name="colorRed">#F44336</color>
+    <color name="colorGreen">#4CAF50</color>
+    <color name="colorBlue">#2196F3</color>
+
+    <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorLightGray">#DDA8A8A8</color>
+    <color name="colorGray">#939393</color>
+    <color name="colorDark">#494848</color>
+
+    <color name="colorPrimaryShadow">#ED80C8FF</color>
+    <color name="colorMint">#70FD9A</color>
+    <color name="colorTiffanyBlue">#A0E7E5</color>
+    <color name="colorYellow">#FBE7C6</color>
+    <color name="colorHotPink">#FFAEBC</color>
+
+    <color name="colorYellowLight">#FFEB3B</color>
+
+
+
+</resources>

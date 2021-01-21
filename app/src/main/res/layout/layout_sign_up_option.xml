@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_design_or"/>
+
+    <TextView
+        android:id="@+id/button_sign_up_with_email_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:text="Sign Up With Email &amp; Password"
+        android:gravity="center"
+        android:padding="@dimen/dimen_8dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorSecondary"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/button_sign_up_with_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:text="Sign Up with Phone"
+        android:gravity="center"
+        android:padding="@dimen/dimen_8dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorSecondary" />
+
+
+</LinearLayout>

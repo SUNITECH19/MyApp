@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/bottom_nav_home"
+        android:title="Home"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24" />
+    <item android:id="@+id/bottom_nav_booking"
+        android:title="Booking"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_local_phone_24" />
+    <item android:id="@+id/bottom_nav_account"
+        android:title="Account"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_24" />
+
+</menu>

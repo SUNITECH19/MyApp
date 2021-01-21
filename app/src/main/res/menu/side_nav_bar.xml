@@ -1,0 +1,72 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="nav_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_side_home"
+            android:icon="@drawable/ic_baseline_local_phone_24"
+            android:iconTint="@color/colorBlack"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/menu_my_wallet"
+            android:icon="@drawable/ic_baseline_local_phone_24"
+            android:iconTint="@color/colorBlack"
+            android:title="My Wallet" />
+
+        <item
+            android:id="@+id/menu_my_review"
+            android:icon="@drawable/ic_baseline_local_phone_24"
+            android:iconTint="@color/colorBlack"
+            android:title="My Review" />
+
+        <item
+            android:id="@+id/menu_log_out"
+            android:icon="@drawable/ic_baseline_local_phone_24"
+            android:iconTint="@color/colorBlack"
+            android:title="LogOut" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <group
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menu_about_us"
+                    android:title="About Us"
+                    android:iconTint="@color/colorBlack"
+                    android:icon="@drawable/ic_baseline_local_phone_24" />
+                <item
+                    android:id="@+id/menu_contact_us"
+                    android:title="Contact Us"
+                    android:iconTint="@color/colorBlack"
+                    android:icon="@drawable/ic_baseline_local_phone_24" />
+                <item
+                    android:id="@+id/menu_help"
+                    android:title="Help"
+                    android:iconTint="@color/colorBlack"
+                    android:icon="@drawable/ic_baseline_local_phone_24" />
+                <item
+                    android:id="@+id/menu_privacy_policy"
+                    android:title="Privacy Policy"
+                    android:iconTint="@color/colorBlack"
+                    android:icon="@drawable/ic_baseline_local_phone_24" />
+
+                <item
+                    android:id="@+id/menu_legal"
+                    android:title="Legal"
+                    android:iconTint="@color/colorBlack"
+                    android:icon="@drawable/ic_baseline_local_phone_24" />
+
+                <item
+                    android:id="@+id/menu_share"
+                    android:title="Share with others"
+                    android:iconTint="@color/colorBlack"
+                    android:icon="@drawable/ic_baseline_local_phone_24" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:paddingLeft="@dimen/dimen_16dp"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_drawer_user_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:textColor="@color/colorDark"
+        android:paddingLeft="4dp"/>
+
+    <TextView
+        android:id="@+id/text_drawer_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:text="User, Your Welcome !"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"/>
+
+    <TextView
+        android:id="@+id/text_drawer_user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_email"
+        android:textColor="@color/colorWhite"
+        android:padding="4dp"/>
+
+</LinearLayout>

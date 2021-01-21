@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/edit_text_otp_d1"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:hint="_"
+        android:maxLength="1"
+        android:singleLine="true"
+        android:elevation="@dimen/dimen_2dp"
+        android:layout_margin="@dimen/dimen_8dp"
+        android:background="@drawable/back_design_small_curve"
+        android:gravity="center"
+        android:padding="@dimen/dimen_8dp"
+        android:inputType="number"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/size_16sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edit_text_otp_d2"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:hint="_"
+        android:maxLength="1"
+        android:singleLine="true"
+        android:elevation="@dimen/dimen_2dp"
+        android:layout_margin="@dimen/dimen_8dp"
+        android:background="@drawable/back_design_small_curve"
+        android:gravity="center"
+        android:padding="@dimen/dimen_8dp"
+        android:inputType="number"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/size_16sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edit_text_otp_d3"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:hint="_"
+        android:maxLength="1"
+        android:singleLine="true"
+        android:elevation="@dimen/dimen_2dp"
+        android:layout_margin="@dimen/dimen_8dp"
+        android:background="@drawable/back_design_small_curve"
+        android:gravity="center"
+        android:padding="@dimen/dimen_8dp"
+        android:inputType="number"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/size_16sp"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/edit_text_otp_d4"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:hint="_"
+        android:maxLength="1"
+        android:singleLine="true"
+        android:elevation="@dimen/dimen_2dp"
+        android:layout_margin="@dimen/dimen_8dp"
+        android:background="@drawable/back_design_small_curve"
+        android:gravity="center"
+        android:padding="@dimen/dimen_8dp"
+        android:inputType="number"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/size_16sp"
+        android:textStyle="bold"/>
+
+
+</LinearLayout>
