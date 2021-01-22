@@ -39,9 +39,21 @@ public interface Constant {
     //------------------------ DB Constant : Do not Change The Value ------------------------------
     // Collections...
     String PERMISSION = "PERMISSION";
-    // Documents....
-    String APP_DATABASE = "APP_DATABASE";
-    String APP_VERSION = "APP_VERSION";
+    // DB Root Collection
+    String HOME = "HOME";
+    String PRODUCTS = "PRODUCTS";
+    String BANNERS = "BANNERS";
+    String SHOP = "SHOP";
+    String ORDERS = "ORDERS";
+    String O_TRACKING = "O_TRACKING";
+    String USERS = "USERS";
+    String ADMINS = "ADMINS";
+
+    // DB Document Name
+    String APP_DATABASE = "AppDatabase";
+    String APP_VERSION = "AppVersion";
+    String USERS_PHONE = "UsersPhone";
+
     // Fields...
     String F_IS_DATABASE_SET = "is_database_set";
 
