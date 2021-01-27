@@ -55,6 +55,17 @@ public class StaticMethods {
         return true;
     }
 
+    public static boolean isInputNumbers(String input){
+        if (input == null )
+            return false;
+        Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+        if (pattern.matcher(input).matches()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     // Is valid Password..
     public static boolean isValidPassword(EditText editText1, EditText editText2){
         if (!isFieldNotEmpty(editText1) ) {

@@ -12,9 +12,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.sunitech.myapp.R;
+import com.sunitech.myapp.others.StaticMethods;
 
 import static com.sunitech.myapp.helper.Constant.AUTH_REQUEST_SIGN_UP;
+import static com.sunitech.myapp.helper.Constant.KEY_EMAIL;
+import static com.sunitech.myapp.helper.Constant.KEY_PHONE;
 import static com.sunitech.myapp.others.StaticMethods.isFieldNotEmpty;
+import static com.sunitech.myapp.others.StaticMethods.isValidEmail;
 import static com.sunitech.myapp.others.StaticMethods.isValidPhone;
 
 public class FragmentSignIn extends Fragment {
@@ -50,6 +54,19 @@ public class FragmentSignIn extends Fragment {
     private void onButtonClicked(){
         // Sign In Button
         buttonSignIn.setOnClickListener(v -> {
+            String keyEmailPhone = KEY_PHONE;
+            String emailPhone = editTextPhone.getText().toString();
+            if (StaticMethods.isInputNumbers( emailPhone )){
+                if (!isValidPhone(editTextPhone)){
+                    return;
+                }
+            }else{
+                if (!isValidEmail( editTextPhone )){
+                    return;
+                }
+                keyEmailPhone = KEY_EMAIL;
+            }
+
             if (isValidPhone(editTextPhone) && isFieldNotEmpty(editTextPassword)){
                 // TODO : Sign In
             }
@@ -58,6 +75,7 @@ public class FragmentSignIn extends Fragment {
         textViewForgotPasswordBtn.setOnClickListener(v -> {
             authListener.showNextFragment(new FragmentForgetPass(authListener));
         });
+
         // Register Or Sign Up
         textViewRegisterBtn.setOnClickListener(v -> {
             if (ActivityAuth.AUTH_CODE == AUTH_REQUEST_SIGN_UP) {
@@ -67,8 +85,6 @@ public class FragmentSignIn extends Fragment {
             }
         });
     }
-
-
 
 
 

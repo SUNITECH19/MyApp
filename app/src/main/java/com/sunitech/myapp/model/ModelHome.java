@@ -16,7 +16,13 @@ public class ModelHome implements Parcelable {
     private String layoutIcon;
     private boolean layoutVisibility;
 
+    // To store data document ID.!
     private List <String> layoutItems;
+    // Documents can be -
+    // 1. Banner List ( Slider )
+    // 2. Product List ( in different Design Type )
+    // 3. Category List.. ( If Any.. )
+    // 4. Sub-Category List.. ( If Any.. )
 
     public String getIndex() {
         return index;
