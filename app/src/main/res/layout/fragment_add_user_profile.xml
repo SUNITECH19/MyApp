@@ -23,7 +23,7 @@
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
                 android:backgroundTint="@color/colorPrimary"
-                android:src="@drawable/logo" />
+                android:src="@drawable/logo_colored_transparent" />
 
             <TextView
                 android:layout_width="match_parent"

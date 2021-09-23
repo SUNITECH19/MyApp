@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/back_design_medium_curve"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="UnusedAttribute">
+
+    <TextView
+        android:id="@+id/textViewEditTitleBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_medium_8"
+        android:paddingTop="@dimen/padding_medium_8"
+        android:paddingRight="@dimen/padding_medium_8"
+        android:paddingBottom="@dimen/padding_medium_8"
+        android:text="Edit Title"
+        android:textColor="@color/colorTextOnSecondary"
+        android:textSize="@dimen/size_medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/colorGrayLight"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEditTitleBtn"
+        app:layout_constraintStart_toStartOf="@+id/textViewEditTitleBtn"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEditTitleBtn" />
+
+    <TextView
+        android:id="@+id/textViewDeleteSectionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_medium_8"
+        android:paddingTop="@dimen/padding_medium_8"
+        android:paddingRight="@dimen/padding_medium_8"
+        android:paddingBottom="@dimen/padding_medium_8"
+        android:text="Delete Section"
+        android:textColor="@color/colorTextOnSecondary"
+        android:textSize="@dimen/size_medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

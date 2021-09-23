@@ -23,7 +23,7 @@
         android:padding="@dimen/dimen_8dp"
         android:text="or"
         android:textColor="@color/colorBlack"
-        android:textSize="@dimen/size_14sp"
+        android:textSize="@dimen/size_16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

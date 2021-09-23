@@ -19,7 +19,8 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="80dp"
                 android:layout_marginBottom="40dp"
-                android:src="@drawable/logo" />
+                android:layout_gravity="center"
+                android:src="@drawable/logo_colored_transparent" />
 
             <EditText
                 android:id="@+id/edit_text_phone"
@@ -32,7 +33,7 @@
                 android:hint="Enter your Phone / Email"
                 android:singleLine="true"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/size_14sp"
+                android:textSize="@dimen/size_16sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -47,7 +48,7 @@
                 android:inputType="textPassword"
                 android:singleLine="true"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/size_14sp"
+                android:textSize="@dimen/size_16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -57,7 +58,7 @@
                 android:padding="@dimen/dimen_4dp"
                 android:text="Forgot Password?"
                 android:textColor="@color/colorSecondary"
-                android:textSize="@dimen/size_14sp"
+                android:textSize="@dimen/size_16sp"
                 android:textStyle="bold"
                 android:layout_marginTop="@dimen/dimen_8dp"
                 android:layout_marginStart="@dimen/dimen_12dp"
@@ -98,7 +99,7 @@
                     android:padding="@dimen/dimen_4dp"
                     android:text="Don't have account?"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/size_14sp"/>
+                    android:textSize="@dimen/size_16sp"/>
 
                 <TextView
                     android:id="@+id/text_view_register_here"

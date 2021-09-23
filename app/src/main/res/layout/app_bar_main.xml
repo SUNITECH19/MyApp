@@ -1,58 +1,611 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/layout_toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-    <TextView
-        android:visibility="gone"
-        android:id="@+id/text_view_no_internet"
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorRed"
-        android:gravity="center"
-        android:padding="12dp"
-        android:text="Hey User!"
-        android:textColor="@color/colorWhite"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        android:translationZ="@dimen/dimen_2dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_auth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text_view_forgot_password"
-        android:layout_alignEnd="@+id/edit_text_password"
-        android:layout_alignRight="@+id/edit_text_password"
-        android:backgroundTint="@color/colorPrimary"
-        android:drawableRight="@drawable/ic_baseline_navigate_next_24"
-        android:drawableTint="@color/colorWhite"
-        android:text="SIGN IN"
-        android:textColor="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!--    Tool Bar -->
+        <include
+            android:id="@+id/includeToolBar"
+            layout="@layout/layout_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <FrameLayout
-        android:id="@+id/frame_layout_main_activity"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_no_internet" />
+        <!--    No internet Connection : Message -->
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textViewNoInternet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRed"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Hey User!"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:translationZ="@dimen/dimen_2dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/includeToolBar" />
+
+        <!--    FrameLayout Main : To Show Alert Messages or information -->
+        <FrameLayout
+            android:id="@+id/frameLayoutMainActivity"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNoInternet" />
+
+        <!--    Main Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNoInternet">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--            Main Content : Top Section - User info Card -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_medium_16">
+
+                    <View
+                        android:id="@+id/dividerUserInfoLeft1"
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="@dimen/dimen_2dp"
+                        android:background="@color/colorSecondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/dividerUserInfoLeft"
+                        app:layout_constraintEnd_toStartOf="@+id/dividerUserInfoLeft"
+                        app:layout_constraintTop_toTopOf="@+id/dividerUserInfoLeft" />
+
+                    <View
+                        android:id="@+id/dividerUserInfoLeft"
+                        android:layout_width="@dimen/dimen_4dp"
+                        android:layout_height="@dimen/dimen_16dp"
+                        android:background="@color/colorSecondary"
+                        android:layout_marginRight="@dimen/margin_medium_8"
+                        android:layout_marginEnd="@dimen/margin_medium_8"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewShopName"
+                        app:layout_constraintEnd_toStartOf="@+id/textViewShopName"
+                        app:layout_constraintTop_toTopOf="@+id/textViewShopName" />
+
+                    <TextView
+                        android:id="@+id/textViewShopName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:maxWidth="264dp"
+                        android:maxLines="2"
+                        android:text="Star Electronics"
+                        android:textColor="@color/colorTextNormal"
+                        android:textSize="@dimen/size_24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/dividerUserInfoRight"
+                        android:layout_width="@dimen/dimen_4dp"
+                        android:layout_height="@dimen/dimen_16dp"
+                        android:layout_marginStart="@dimen/margin_medium_8"
+                        android:layout_marginLeft="@dimen/margin_medium_8"
+                        android:background="@color/colorSecondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewShopName"
+                        app:layout_constraintStart_toEndOf="@+id/textViewShopName"
+                        app:layout_constraintTop_toTopOf="@+id/textViewShopName"
+                        app:layout_constraintVertical_bias="0.625" />
+
+                    <View
+                        android:id="@+id/dividerUserInfoRight1"
+                        android:layout_width="@dimen/dimen_0dp"
+                        android:layout_height="@dimen/dimen_2dp"
+                        android:background="@color/colorSecondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/dividerUserInfoRight"
+                        app:layout_constraintStart_toEndOf="@+id/dividerUserInfoRight"
+                        app:layout_constraintTop_toTopOf="@+id/dividerUserInfoRight" />
+
+                    <TextView
+                        android:id="@+id/textViewShopAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium_16"
+                        android:layout_marginRight="@dimen/margin_medium_16"
+                        android:layout_marginTop="@dimen/margin_small_4"
+                        android:gravity="center"
+                        android:text="Shop No. 2, Santi nagar Sagar, Makronia"
+                        android:textColor="@color/colorTextNormal"
+                        android:textSize="@dimen/size_18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewShopName" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/colorGrayLight" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <!--   My Product and My Orders   -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutMyProductsBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_medium_8"
+                        android:layout_margin="@dimen/margin_medium_8"
+                        android:background="@drawable/back_design_curve_small_fill"
+                        android:elevation="@dimen/elevation_2"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="@drawable/click_ripple_effect"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="@dimen/dimen_48dp"
+                            android:layout_height="@dimen/dimen_48dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_outline_dvr_product_list_24"
+                            tools:ignore="VectorDrawableCompat"
+                            app:tint="@color/colorIconNormal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_medium_8"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="My Products"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutMyOrdersBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_medium_8"
+                        android:layout_margin="@dimen/margin_medium_8"
+                        android:background="@drawable/back_design_curve_small_fill"
+                        android:elevation="@dimen/elevation_2"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="@drawable/click_ripple_effect"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="@dimen/dimen_48dp"
+                            android:layout_height="@dimen/dimen_48dp"
+                            android:layout_gravity="center"
+                            app:tint="@color/colorIconNormal"
+                            android:src="@drawable/ic_outline_menu_book_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_medium_8"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="My Orders"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_18sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/corner_medium_8"
+                    android:layout_margin="@dimen/margin_medium_8">
+
+                    <ImageView
+                        android:id="@+id/imageViewBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/sample_banner_img" />
+                </androidx.cardview.widget.CardView>
+
+                <!--   Manage Product View   -->
+                <LinearLayout
+                    android:id="@+id/linearLayoutManageHomePageBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_medium_8"
+                    android:layout_margin="@dimen/margin_medium_8"
+                    android:background="@drawable/back_design_curve_small_fill"
+                    android:elevation="@dimen/elevation_2"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/click_ripple_effect"
+                    tools:ignore="UnusedAttribute">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_48dp"
+                        android:layout_height="@dimen/dimen_48dp"
+                        android:layout_margin="@dimen/margin_medium_8"
+                        android:layout_gravity="center"
+                        app:tint="@color/colorIconNormal"
+                        android:src="@drawable/ic_outline_app_home_manage_24" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small_4"
+                            android:text="Manage Product View"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small_4"
+                            android:text="Customer's App View Customization"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_small" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--   Selling Records  View   -->
+                <LinearLayout
+                    android:id="@+id/linearLayoutSellingRecordsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_medium_8"
+                    android:layout_margin="@dimen/margin_medium_8"
+                    android:background="@drawable/back_design_curve_small_fill"
+                    android:elevation="@dimen/elevation_2"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/click_ripple_effect"
+                    tools:ignore="UnusedAttribute">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_48dp"
+                        android:layout_height="@dimen/dimen_48dp"
+                        android:layout_margin="@dimen/margin_medium_8"
+                        android:layout_gravity="center"
+                        app:tint="@color/colorIconNormal"
+                        android:src="@drawable/ic_outline_insert_chart_records_24" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small_4"
+                            android:text="Selling Records"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small_4"
+                            android:text="Selling graphs, Monthly ups and downs"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_small" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--   Out of Stocks - Products   -->
+                <LinearLayout
+                    android:id="@+id/linearLayoutOutOfStocksBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_medium_8"
+                    android:layout_margin="@dimen/margin_medium_8"
+                    android:background="@drawable/back_design_curve_small_fill"
+                    android:elevation="@dimen/elevation_2"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/click_ripple_effect"
+                    tools:ignore="UnusedAttribute">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_48dp"
+                        android:layout_height="@dimen/dimen_48dp"
+                        android:layout_margin="@dimen/margin_medium_8"
+                        android:layout_gravity="center"
+                        app:tint="@color/colorIconNormal"
+                        android:src="@drawable/ic_outline_manage_search_out_of_stock_24" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small_4"
+                            android:text="Out of Stocks Products"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small_4"
+                            android:text="All the out of stocks list, Less stocks list"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_small" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--   Manage Service Areas   -->
+                <LinearLayout
+                    android:id="@+id/linearLayoutManageServicesBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_medium_8"
+                    android:layout_margin="@dimen/margin_medium_8"
+                    android:background="@drawable/back_design_curve_small_fill"
+                    android:elevation="@dimen/elevation_2"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/click_ripple_effect"
+                    tools:ignore="UnusedAttribute">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_48dp"
+                        android:layout_height="@dimen/dimen_48dp"
+                        android:layout_margin="@dimen/margin_medium_8"
+                        android:layout_gravity="center"
+                        app:tint="@color/colorIconNormal"
+                        android:src="@drawable/ic_outline_edit_location_service_24" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small_4"
+                            android:text="Manage Service Area"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small_4"
+                            android:text="Service area/location name and pin codes"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_small" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--   Customer's Feedback   -->
+                <LinearLayout
+                    android:id="@+id/linearLayoutCustomerFeedbackBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_medium_8"
+                    android:layout_margin="@dimen/margin_medium_8"
+                    android:background="@drawable/back_design_curve_small_fill"
+                    android:elevation="@dimen/elevation_2"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/click_ripple_effect"
+                    tools:ignore="UnusedAttribute">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_48dp"
+                        android:layout_height="@dimen/dimen_48dp"
+                        android:layout_margin="@dimen/margin_medium_8"
+                        android:layout_gravity="center"
+                        app:tint="@color/colorIconNormal"
+                        android:src="@drawable/ic_outline_thumbs_up_down_feedback_24" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small_4"
+                            android:text="Customer's Feedback"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small_4"
+                            android:text="What customers say about your services"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_small" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--  Save Nature   -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_medium_8"
+                    android:layout_margin="@dimen/margin_medium_8"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_medium_8"
+                            app:tint="@color/colorIconNormal"
+                            android:src="@drawable/ic_outline_recycling_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Recycle"
+                            android:textSize="@dimen/size_small" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_medium_8"
+                            app:tint="@color/colorIconNormal"
+                            android:src="@drawable/ic_outline_water_damage_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Save Water"
+                            android:textSize="@dimen/size_small" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_medium_8"
+                            app:tint="@color/colorIconNormal"
+                            android:src="@drawable/ic_outline_spa_save_nature_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Save Nature"
+                            android:textSize="@dimen/size_small" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/colorGrayLight" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_medium_16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_medium_16"
+                        android:layout_marginRight="@dimen/margin_medium_16"
+                        android:gravity="center"
+                        android:text="Powered by -"
+                        android:textSize="@dimen/size_12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutPoweredBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="@drawable/click_ripple_effect"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="@dimen/dimen_24dp"
+                            android:layout_height="@dimen/dimen_24dp"
+                            android:layout_margin="@dimen/margin_medium_8"
+                            android:src="@drawable/launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="WackyCodes Design and Development"
+                            android:textColor="@color/colorTextNormal"
+                            android:textSize="@dimen/size_small" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

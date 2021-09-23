@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBasTheme.AddContent"
+        tools:context=".fragment.addproduct.FragmentAddWeight">
+        <!--    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--  Add Top View (AppBar)   -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:elevation="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/toolBarTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/padding_medium_8"
+                    android:text="Add Size or Weight"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size_16sp" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:src="@drawable/ic_baseline_close_24"
+                    app:tint="@color/colorWhite" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroupOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_12"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/radioButtonWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    android:padding="@dimen/padding_medium_8"
+                    android:layout_marginRight="@dimen/margin_medium_12"
+                    android:text="Weight"/>
+                <RadioButton
+                    android:id="@+id/radioButtonSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/padding_medium_8"
+                    android:layout_marginLeft="@dimen/margin_medium_12"
+                    android:text="Size"/>
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_64dp"
+                android:padding="@dimen/padding_small_4"
+                android:layout_margin="@dimen/margin_medium_12"
+                android:background="@drawable/back_design_curve_small_transparent_1dp_border"
+                android:backgroundTint="@color/colorGrayLight"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:drawableLeft="@drawable/ic_outline_edit_24"
+                    android:drawablePadding="@dimen/padding_medium_8"
+                    android:hint="Enter Size"
+                    android:inputType="number|numberDecimal"
+                    android:padding="@dimen/padding_medium_8"/>
+
+                <Spinner
+                    android:id="@+id/spinnerSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen_0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_margin="@dimen/padding_medium_8"
+                android:paddingLeft="@dimen/padding_large_24"
+                android:paddingRight="@dimen/padding_large_24"
+                android:backgroundTint="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Done"
+                android:textColor="@color/colorTextOnPrimary" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

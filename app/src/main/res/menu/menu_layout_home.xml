@@ -2,13 +2,33 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <item
         android:id="@+id/menu_notification_main"
         android:orderInCategory="100"
         android:icon="@drawable/ic_baseline_notifications_24"
-        android:iconTint="@color/colorWhite"
+        android:iconTint="@color/colorIconNormal"
         android:title="Notifications"
         app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_my_profile"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_outline_person_24"
+        android:iconTint="@color/colorIconNormal"
+        android:title="My Profile"/>
+
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_outline_settings_24"
+        android:iconTint="@color/colorIconNormal"
+        android:title="Settings"/>
+
+    <item
+        android:id="@+id/menu_log_out"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_outline_logout_24"
+        android:iconTint="@color/colorIconNormal"
+        android:title="Log Out"/>
 
 </menu>

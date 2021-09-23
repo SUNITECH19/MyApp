@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="dialogType"
+            type="Integer" />
+        <variable
+            name="dialogShowIcon"
+            type="Boolean" />
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="subTitle"
+            type="String" />
+        <variable
+            name="positiveBtnText"
+            type="String" />
+        <variable
+            name="negativeBtnText"
+            type="String" />
+        <variable
+            name="actionListener"
+            type="com.ecom.starshop.helper.DialogListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        tools:context=".login.FragmentForgetPass">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_medium_8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/dialogIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_medium_8"
+                    android:src="@drawable/ic_baseline_warning_amber_24"
+                    android:layout_gravity="center"
+                    bind:setVisibility="@{dialogShowIcon}"
+                    bind:setDialogIcon="@{dialogType}" />
+
+                <TextView
+                    android:id="@+id/dialogTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_medium_8"
+                    android:layout_marginRight="@dimen/margin_medium_8"
+                    android:padding="@dimen/dimen_4dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorSecondaryVariant"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size_18sp"
+                    android:text="@{title}"
+                    bind:setDialogTitleColor="@{dialogType}"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_design_medium_curve"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="0dp">
+
+
+                <TextView
+                    android:id="@+id/dialogSubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_medium_8"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/size_16sp"
+                    android:text="@{subTitle}"
+                    bind:setVisibility="@{subTitle}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:layout_marginTop="@dimen/margin_medium_8"
+                    android:background="@color/colorGrayLight" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/margin_medium_12"
+                    android:layout_marginLeft="@dimen/margin_medium_12"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/dialogButtonNegative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:padding="@dimen/padding_medium_8"
+                        android:minWidth="@dimen/dimen_64dp"
+                        android:gravity="center"
+                        android:background="@color/colorWhite"
+                        android:layout_marginRight="@dimen/margin_medium_16"
+                        android:textAllCaps="true"
+                        android:text="@{negativeBtnText}"
+                        android:textColor="@color/colorDark"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="@{()->actionListener.onNegativeButtonClick()}"
+                        android:foreground="@drawable/click_ripple_effect"
+                        tools:ignore="UnusedAttribute" />
+
+                    <TextView
+                        android:id="@+id/dialogButtonPositive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:padding="@dimen/padding_medium_8"
+                        android:minWidth="@dimen/dimen_64dp"
+                        android:gravity="center"
+                        android:background="@color/colorWhite"
+                        android:textAllCaps="true"
+                        android:text="@{positiveBtnText}"
+                        android:textColor="@color/colorAccent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="@{()->actionListener.onPositiveButtonClick()}"
+                        android:foreground="@drawable/click_ripple_effect"
+                        tools:ignore="UnusedAttribute" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

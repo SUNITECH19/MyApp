@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButtonBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/colorTransparent"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:tint="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/toolBarTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_medium_8"
+                android:text="Select Images"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/size_16sp" />
+
+            <Button
+                android:id="@+id/buttonNext"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorTransparent"
+                android:text="NEXT"
+                android:textColor="@color/colorSecondary"
+                android:src="@drawable/ic_baseline_close_24" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrayLight"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewSelectedImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/layout_item_selected_image"
+                    android:orientation="horizontal" />
+
+                <ImageView
+                    android:id="@+id/imageViewSelected"
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/margin_small_4"
+                    android:layout_height="184dp"
+                    android:src="@drawable/ic_outline_image_gray_24" />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_marginBottom="@dimen/margin_small_2"
+                android:background="@color/colorWhite"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewShowText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="fill_vertical"
+                    android:padding="@dimen/padding_medium_8"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryVariant"/>
+
+                <ImageButton
+                    android:id="@+id/imageButtonMultiOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_small_4"
+                    android:padding="@dimen/padding_medium_12"
+                    android:background="@drawable/back_round_design"
+                    android:backgroundTint="@color/colorWhite"
+                    android:src="@drawable/ic_outline_content_copy_24"
+                    app:tint="@color/colorPrimaryVariant" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonFile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_small_4"
+                    android:padding="@dimen/padding_medium_12"
+                    android:background="@drawable/back_round_design"
+                    android:backgroundTint="@color/colorWhite"
+                    android:src="@drawable/ic_outline_folder_open_24"
+                    app:tint="@color/colorPrimaryVariant" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_small_4"
+                    android:padding="@dimen/padding_medium_12"
+                    android:background="@drawable/back_round_design"
+                    android:backgroundTint="@color/colorWhite"
+                    android:src="@drawable/ic_outline_camera_alt_24"
+                    app:tint="@color/colorPrimaryVariant" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewShowImages"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/layout_item_image_picker"
+            app:spanCount="4"
+            android:orientation="vertical"
+            android:scrollbars="none" />
+
+
+    </LinearLayout>
+
+</layout>

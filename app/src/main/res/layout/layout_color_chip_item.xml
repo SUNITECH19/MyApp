@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="colorModel"
+            type="com.ecom.starshop.model.ModelProduct.ProductColorItems" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_margin="@dimen/margin_medium_8"
+        android:background="@drawable/back_design_curve_rounded_solid"
+        android:backgroundTint="@color/colorPrimaryLight"
+        android:paddingLeft="@dimen/padding_small_4"
+        android:paddingRight="@dimen/padding_medium_8"
+        android:orientation="horizontal">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            app:cardBackgroundColor="@color/colorGrayLight"
+            app:cardCornerRadius="50dp">
+            <View
+                android:id="@+id/viewColorCode"
+                android:layout_width="@dimen/dimen_32dp"
+                android:layout_height="@dimen/dimen_32dp"
+                android:layout_gravity="center"
+                android:translationZ="@dimen/margin_small_2"
+                android:background="@drawable/back_design_curve_rounded_solid"
+                bind:setBackgroundTint="@{colorModel.colorCode}"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_small_4"
+            android:text="@{colorModel.colorName}"
+            android:textColor="@color/colorOnPrimary"
+            android:textSize="@dimen/size_18sp" />
+
+
+    </LinearLayout>
+</layout>

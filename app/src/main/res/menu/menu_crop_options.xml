@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item android:id="@+id/menu_crop_circle"-->
+<!--        android:title="Circle Shape"-->
+<!--        android:enabled="true"-->
+<!--        android:iconTint="@color/colorGray"-->
+<!--        android:icon="@drawable/ic_outline_circle_check_24" />-->
+    <item android:id="@+id/menu_crop_square"
+        android:title="Square Shape"
+        android:enabled="true"
+        android:iconTint="@color/colorGray"
+        android:icon="@drawable/ic_baseline_crop_square_24" />
+    <item android:id="@+id/menu_crop_3_2_ratio"
+        android:title="3:2 Shape"
+        android:enabled="true"
+        android:iconTint="@color/colorGray"
+        android:icon="@drawable/ic_baseline_crop_3_2_24" />
+    <item android:id="@+id/menu_crop_16_9_ratio"
+        android:title="16:9 Shape"
+        android:enabled="true"
+        android:iconTint="@color/colorGray"
+        android:icon="@drawable/ic_baseline_crop_16_9_24" />
+    <item android:id="@+id/menu_crop_free"
+        android:title="Free Crop"
+        android:enabled="true"
+        android:iconTint="@color/colorGray"
+        android:icon="@drawable/ic_outline_crop_free_24" />
+
+</menu>

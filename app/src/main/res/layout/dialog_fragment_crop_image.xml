@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButtonClose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/colorTransparent"
+                android:src="@drawable/ic_baseline_close_24"
+                app:tint="@color/colorWhite" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_medium_8"
+                android:text="Crop Image"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/size_16sp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonDone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/colorTransparent"
+                android:src="@drawable/ic_baseline_check_24"
+                app:tint="@color/colorWhite" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_outline_image_gray_24" />
+
+            <com.theartofdev.edmodo.cropper.CropImageView
+                android:id="@+id/cropperImageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0dp"
+                android:layout_weight="1"
+                app:cropBackgroundColor="@color/colorFadedLight"
+                app:cropBorderLineColor="@color/colorWhite"
+                app:cropBorderLineThickness="@dimen/dimen_05dp"
+                app:cropGuidelinesColor="@color/colorGray"
+                app:cropBorderCornerColor="@color/colorSecondary"
+                app:cropBorderCornerOffset="@dimen/dimen_0dp"
+                app:cropMultiTouchEnabled="true"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButtonRotate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:src="@drawable/ic_baseline_rotate_right_24"
+                    app:tint="@color/colorWhite"/>
+
+                <ImageButton
+                    android:id="@+id/imageButtonFlipHr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:src="@drawable/ic_baseline_flip_24"
+                    app:tint="@color/colorWhite" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonFlipVr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:src="@drawable/ic_flip_hr"
+                    app:tint="@color/colorWhite" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/imageButtonOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:src="@drawable/ic_baseline_more_vert_24"
+                    app:tint="@color/colorWhite" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="imageLink"
+            type="String" />
+        <variable
+            name="indexText"
+            type="String" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="@dimen/margin_small_4"
+        app:cardCornerRadius="@dimen/corner_small_4"
+        app:cardElevation="@dimen/dimen_0dp"
+        android:gravity="center"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_outline_image_gray_24"
+            bind:setImage="@{imageLink}" />
+
+        <TextView
+            android:id="@+id/textViewIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/size_16sp"
+            android:padding="@dimen/padding_medium_8"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:background="@color/colorFaded"
+            android:text="@{indexText}"
+            bind:setVisibility="@{indexText}"/>
+
+        <Button
+            android:id="@+id/buttonCropImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorFaded"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="bottom"
+            android:text="Crop Image"/>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

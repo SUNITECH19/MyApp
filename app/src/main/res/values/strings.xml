@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My App</string>
+    <string name="app_name">Star Shop</string>
     <!--
 App Name: Pandit Ji - Click Pandit Ji
 -->
@@ -12,9 +12,47 @@ App Name: Pandit Ji - Click Pandit Ji
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!--    =============== Used As a Resources  =====================================================================-->
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="undo">Undo</string>
+    <string name="required_field">Required Field!</string>
+
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">CANCEL</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="something_went_wrong">Something Went Wrong!</string>
+    <string name="something_went_wrong_with_sorry">Sorry! Something Went Wrong!</string>
+    <string name="failed">Failed!</string>
+    <string name="sorry_try_again">Sorry! Try Again!!</string>
+    <string name="try_again">Please Try Again !</string>
+    <string name="check_your_connection">Please Check your Internet Connection!</string>
+
+
+    <!--    ==========================================================================================================-->
+    <!--  String List  -->
+
+    <string-array name="list_banner_types">
+        <item>Product Promo</item>
+        <item>Website Promo</item>
+        <item>No Action</item>
+    </string-array>
+
+    <string-array name="list_offer_types">
+        <!--    1.Discount, 2.Free Delivery, 3.Delivery Discount, 4.Voucher Code, 5.Gift -->
+        <item>Discount</item>
+        <item>Free Delivery</item>
+        <item>Delivery Discount</item>
+        <item>Voucher Code</item>
+        <item>Gift/Free Item</item>
+    </string-array>
+
+
 </resources>

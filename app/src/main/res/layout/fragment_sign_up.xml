@@ -20,7 +20,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:layout_marginBottom="40dp"
-                android:src="@drawable/logo"/>
+                android:layout_gravity="center"
+                android:src="@drawable/logo_colored_transparent"/>
 
             <RelativeLayout
                 android:id="@+id/rel_layout_sign_up_with_phone"

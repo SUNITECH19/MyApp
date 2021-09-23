@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.ActivityServiceAreas">
+
+        <!--    Tool Bar -->
+        <include
+            android:id="@+id/includeToolBar"
+            layout="@layout/layout_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/includeToolBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium_12"
+                    android:background="@drawable/back_design_medium_curve"
+                    android:elevation="@dimen/elevation_4"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_large_24">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_48dp"
+                        android:layout_height="@dimen/dimen_48dp"
+                        android:layout_margin="@dimen/margin_medium_8"
+                        android:layout_gravity="center"
+                        app:tint="@color/colorIconLight"
+                        android:src="@drawable/ic_outline_place_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_medium_8"
+                        android:text="Total Areas"
+                        android:textColor="@color/colorTextNormal"
+                        android:textSize="@dimen/size_extra_large" />
+
+                    <TextView
+                        android:id="@+id/tvTotalAreas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_medium_8"
+                        android:text="230"
+                        android:textColor="@color/colorTextNormal"
+                        android:textSize="@dimen/size_extra_large"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium_12"
+                    android:background="@drawable/back_design_medium_curve"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_medium_12">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_medium_8">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_medium_8"
+                            android:text="Active"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="@dimen/size_24sp" />
+
+                        <TextView
+                            android:id="@+id/tvActiveAreas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_medium_8"
+                            android:text="210"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="@dimen/size_24sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/dimen_1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorGrayLight" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_medium_8">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_medium_8"
+                            android:text="Inactive"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/size_24sp" />
+
+                        <TextView
+                            android:id="@+id/tvInActiveAreas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_medium_8"
+                            android:text="20"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/size_24sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp"
+                    android:background="@color/colorGrayLight" />
+
+                <LinearLayout
+                    android:id="@+id/layoutCloseServiceBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_medium_16"
+                    android:background="@drawable/back_design_curve_small_transparent_1dp_border"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:orientation="horizontal">
+
+                    <Switch
+                        android:id="@+id/switchCloseServiceBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_medium_12"
+                        android:text="Close All Area Services"
+                        android:checked="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextNormal"
+                        android:textSize="@dimen/size_medium"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAddNewAreaBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/margin_medium_16"
+                    android:background="@drawable/back_design_curve_small_transparent_1dp_border"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_medium_12"
+                        android:drawableLeft="@drawable/ic_baseline_add_24"
+                        android:drawableTint="@color/colorTextNormal"
+                        android:text="Add New Area"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextNormal"
+                        android:textSize="@dimen/size_medium" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonViewAllAreas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="View All Areas"
+                    android:layout_margin="@dimen/margin_medium_16"
+                    android:background="@drawable/back_design_small_curve"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/colorTextOnPrimary" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

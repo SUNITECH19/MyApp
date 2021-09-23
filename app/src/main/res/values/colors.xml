@@ -1,46 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--   Wackycodes : Colors -->
 
-    <color name="colorPrimary">#ff7600</color>
-    <color name="colorPrimaryVariant">#ff7600</color>
-    <color name="colorPrimaryDark">#AC5000</color>
-    <color name="colorAccent">#0073A6</color>
+    <!--    Color Name Default  -->
+    <color name="colorPrimary">#344955</color>
+    <color name="colorPrimaryVariant">#0b222c</color>
+    <color name="colorPrimaryDark">@color/colorPrimaryVariant</color>
+    <color name="colorPrimaryLight">#5f7481</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#F9AA33</color>
+    <color name="colorSecondaryVariant">#c17b00</color>
+    <color name="colorSecondaryDark">@color/colorSecondaryVariant</color>
+    <color name="colorSecondaryLight">#ffdc65</color>
+    <color name="colorOnSecondary">#0D1213</color>
+    <color name="colorAccent">#03A9F4</color>
 
-    <color name="colorSecondary">#009688</color>
-    <color name="colorSecondaryVariant">#009688</color>
+    <color name="colorError">#F44336</color>
+    <color name="colorSuccess">#4CAF50</color>
+    <color name="colorWarning">#FF9800</color>
+    <color name="colorAlert">#03A9F4</color>
+    <color name="colorHighLight">#008EFF</color>
+    <color name="colorDisable">#B9615C5C</color>
+    <color name="colorFaded">#BF2F302C</color>
+    <color name="colorFadedLight">#802C2D30</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorSilver">#C0C0C0</color>
+    <color name="colorGold">#FFD700</color>
+    <color name="colorMilky">#FDFFF5</color>
 
-<!--    <color name="colorPrimary">#00599B</color>-->
-<!--    <color name="colorPrimaryVariant">#00599B</color>-->
+    <!--    Fixed Color Name -->
+    <color name="colorDark">#696969</color>
+    <color name="colorGray">#808080</color>
+    <color name="colorGrayLight">#D3D3D3</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGreen">#008000</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorYellow">#FFFF00</color>
+    <color name="colorBlue">#0000FF</color>
+    <color name="colorOrange">#FFA500</color>
 
-<!--    <color name="colorPrimaryDark">#00316C</color>-->
-<!--    <color name="colorPrimaryLight">#4E85CC</color>-->
+    <!--  Background Lights Color Name -->
+    <color name="colorBackLightBlue">#CCDBFD</color>
+    <color name="colorBackBabyBlue">#ABC4FF</color>
+    <color name="colorBackLightGoldy">#FFF1E6</color>
+    <color name="colorBackPinkGoldy">#EEDDD3</color>
+    <color name="colorBackBabyPink">#F9C6C9</color>
+    <color name="colorBackLinen">#EFE5DC</color>
+    <color name="colorBackOrchidPink">#F2C6DE</color>
+    <color name="colorBackKhakiLav">#DBCDF0</color>
+    <color name="colorBackBeauBlue">#C6DEF1</color>
+    <color name="colorBackLightCyan">#C9E4DE</color>
+    <color name="colorBackPapayaWhip">#FAEDCB</color>
+    <color name="colorBackUnbleachedSilk">#F7D9C4</color>
+    <color name="colorBackPlatinum">#E2E2DF</color>
+    <color name="colorBackPeriwinkleCrayola">#B8BEDD</color>
+    <color name="colorBackLavenderBlush">#F0E6EF</color>
+    <color name="colorBackPinkLavender">#EFC3E6</color>
 
-<!--    <color name="colorSecondary">#B65B00</color>-->
-<!--    <color name="colorSecondaryLight">#EE8938</color>-->
-<!--    <color name="colorSecondaryDrk">#802F00</color>-->
+    <!--    Components Colors -->
+    <color name="colorTextNormal">#232F34</color>
+    <color name="colorTextLight">#4A6572</color>
+    <color name="colorTextWhite">@color/colorWhite</color>
+    <color name="colorTextGray">@color/colorGray</color>
+    <color name="colorTextPrimary">@color/colorPrimary</color>
+    <color name="colorTextSecondary">@color/colorSecondary</color>
+    <color name="colorTextSecondaryVariant">@color/colorSecondaryVariant</color>
+    <color name="colorTextAlert">@color/colorSecondaryVariant</color>
+    <color name="colorTextOnPrimary">@color/colorOnPrimary</color>
+    <color name="colorTextOnSecondary">@color/colorOnSecondary</color>
+    <color name="colorWhiteTextOnSecondary">@color/colorWhite</color>
 
-<!--    <color name="colorAccent">#B65B00</color>-->
+    <color name="colorButtonPrimary">@color/colorPrimary</color>
+    <color name="colorButtonSecondary">@color/colorSecondary</color>
+    <color name="colorButtonOnPrimary">@color/colorOnPrimary</color>
+    <color name="colorButtonOnSecondary">@color/colorOnSecondary</color>
 
-    <color name="colorWhite">#FCFCFC</color>
-    <color name="colorBlack">#191616</color>
-    <color name="colorLightWhite">#BFFFFFFF</color>
-    <color name="colorRed">#F44336</color>
-    <color name="colorGreen">#4CAF50</color>
-    <color name="colorBlue">#2196F3</color>
+    <color name="colorButtonDisable">@color/colorGray</color>
+    <color name="colorButtonEnable">@color/colorSecondary</color>
+    <color name="colorButtonPrimaryAction">@color/colorPrimaryVariant</color>
+    <color name="colorButtonSecondaryAction">@color/colorSecondaryVariant</color>
 
-    <color name="colorTransparent">#00FFFFFF</color>
-    <color name="colorLightGray">#DDA8A8A8</color>
-    <color name="colorGray">#939393</color>
-    <color name="colorDark">#494848</color>
+    <color name="colorIconNormal">@color/colorGray</color>
+    <color name="colorIconLight">#4A6572</color>
+    <color name="colorIconWhite">@color/colorWhite</color>
+    <color name="colorIconOnPrimary">@color/colorOnPrimary</color>
+    <color name="colorIconOnSecondary">@color/colorOnSecondary</color>
+    <color name="colorIconDisable">@color/colorGray</color>
 
-    <color name="colorPrimaryShadow">#ED80C8FF</color>
-    <color name="colorMint">#70FD9A</color>
-    <color name="colorTiffanyBlue">#A0E7E5</color>
-    <color name="colorYellow">#FBE7C6</color>
-    <color name="colorHotPink">#FFAEBC</color>
-
-    <color name="colorYellowLight">#FFEB3B</color>
+    <color name="colorBackgroundOnPrimary">#4A6572</color>
+    <color name="colorBackgroundOnSecondary">#FFBB54</color>
+    <color name="colorBackgroundNormal">#E5ECEF</color>
 
 
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="imageResource"
+            type="Integer" />
+        <variable
+            name="titleText"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginLeft="@dimen/margin_small_2"
+        android:layout_marginRight="@dimen/margin_small_2"
+        android:layout_marginTop="@dimen/margin_small_4"
+        android:background="@color/colorGrayLight"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@{imageResource}" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{titleText}"
+            android:textColor="@color/colorPrimaryVariant"
+            android:textSize="@dimen/size_16sp" />
+
+    </LinearLayout>
+</layout>

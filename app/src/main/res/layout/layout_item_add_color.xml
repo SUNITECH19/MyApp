@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="image1"
+            type="String" />
+        <variable
+            name="image2"
+            type="String" />
+        <variable
+            name="image3"
+            type="String" />
+
+        <variable
+            name="colorModel"
+            type="com.ecom.starshop.model.ModelProduct.ProductColorItems" />
+
+        <variable
+            name="colorActionListener"
+            type="com.ecom.starshop.helper.AddProductListener.OnColorItemActionListener" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBasTheme.AddContent"
+        android:background="@drawable/back_design_small_curve"
+        android:layout_margin="@dimen/margin_small_2"
+        android:elevation="@dimen/elevation_2"
+        android:padding="@dimen/padding_small_4"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_small_4"
+            android:layout_weight="40"
+            android:background="@drawable/back_design_curve_small_transparent_1dp_border"
+            android:backgroundTint="@color/colorGrayLight">
+
+            <!--   Images : Show     -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                bind:cardCornerRadius="@dimen/corner_small_4"
+                bind:cardElevation="@dimen/dimen_0dp"
+                bind:setVisibility="@{image1}">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    bind:setImage="@{image1}"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_medium_8"
+                android:layout_marginLeft="@dimen/margin_medium_8"
+                bind:cardCornerRadius="@dimen/corner_small_4"
+                bind:cardElevation="@dimen/dimen_0dp"
+                bind:setVisibility="@{image2}">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    bind:setImage="@{image2}"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_medium_16"
+                android:layout_marginLeft="@dimen/margin_medium_16"
+                bind:cardCornerRadius="@dimen/corner_small_4"
+                bind:cardElevation="@dimen/dimen_0dp"
+                bind:setVisibility="@{image3}">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    bind:setImage="@{image3}"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <!--   Images : Add Image Text Button     -->
+            <TextView
+                android:id="@+id/tvAddImagesBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Add Images"
+                android:textColor="@color/colorTextGray"
+                android:gravity="center"
+                android:drawableTop="@drawable/ic_baseline_add_24"
+                android:drawableTint="@color/colorGray"
+                android:padding="@dimen/padding_large_24"
+                android:onClick="@{()->colorActionListener.onAddImageClick()}"
+                bind:setInvisibility="@{image1}"/>
+
+            <TextView
+                android:id="@+id/tvChangeImagesBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_design_curve_rounded_solid"
+                android:backgroundTint="@color/colorDark"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="Change Images"
+                android:textColor="@color/colorOnPrimary"
+                android:gravity="center"
+                android:translationZ="@dimen/dimen_4dp"
+                android:paddingLeft="@dimen/padding_medium_8"
+                android:paddingRight="@dimen/padding_medium_8"
+                android:paddingTop="@dimen/padding_small_4"
+                android:paddingBottom="@dimen/padding_small_4"
+                android:onClick="@{()->colorActionListener.onAddImageClick()}"
+                bind:setVisibility="@{image1}"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_medium_8"
+            android:paddingRight="@dimen/padding_medium_8"
+            android:paddingBottom="@dimen/padding_small_4"
+            android:layout_weight="60"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutProductColorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    app:startIconDrawable="@drawable/ic_outline_color_lens_24"
+                    app:startIconTint="@color/colorIconNormal"
+                    app:startIconContentDescription="password"
+                    android:hint="Color Name *"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+<!--
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+-->
+                    <AutoCompleteTextView
+                        android:id="@+id/inputProductColorName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@={colorModel.colorName}"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/imageButtonRemoveItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="@{()->colorActionListener.onRemoveItem()}"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:src="@drawable/ic_outline_delete_24"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutColorStock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="55"
+                    android:layout_marginBottom="@dimen/margin_small_2"
+
+                    android:orientation="horizontal"
+
+                    app:startIconDrawable="@drawable/ic_baseline_money_stocks_24"
+                    app:startIconTint="@color/colorIconNormal"
+                    app:startIconContentDescription="password"
+                    android:hint="Stock"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputProductColorStock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@={colorModel.colorStocks}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutColorCodeBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="45"
+                    android:layout_marginLeft="@dimen/margin_small_4"
+                    android:layout_marginTop="@dimen/margin_small_4"
+                    android:layout_marginBottom="@dimen/margin_small_2"
+                    android:background="@drawable/back_design_curve_small_transparent_1dp_border"
+                    android:backgroundTint="@color/colorGrayLight"
+                    android:orientation="vertical"
+                    android:onClick="@{()->colorActionListener.onColorPickerClick()}"
+                    >
+
+                    <View
+                        android:id="@+id/viewColorCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="15"
+                        android:layout_marginLeft="@dimen/margin_small_4"
+                        android:layout_marginRight="@dimen/margin_small_4"
+                        android:layout_marginTop="@dimen/margin_small_4"
+                        android:layout_marginBottom="@dimen/margin_small_2"
+                        android:elevation="@dimen/elevation_2"
+                        android:background="@drawable/back_design_curve_small_fill"
+                        bind:setBackgroundTint="@{colorModel.colorCode}"/>
+
+                    <TextView
+                        android:id="@+id/textViewColorCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_small_2"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:text="@={colorModel.colorCode}"
+                        android:textColor="@color/colorTextNormal"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_small_2"
+                android:gravity="center_vertical"
+                android:text="*Fill Stock : Total products of this color"
+                android:textColor="@color/colorTextAlert"
+                android:textSize="@dimen/size_12sp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

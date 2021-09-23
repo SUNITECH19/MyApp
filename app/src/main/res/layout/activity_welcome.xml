@@ -9,7 +9,7 @@
 
     <TextView
         android:visibility="gone"
-        android:id="@+id/text_view_no_internet"
+        android:id="@+id/textViewNoInternet"
         android:layout_width="match_parent"
         android:layout_height="76dp"
         android:background="@color/colorRed"
@@ -27,8 +27,8 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:src="@drawable/logo"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_colored_transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

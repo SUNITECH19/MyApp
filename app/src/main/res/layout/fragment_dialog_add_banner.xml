@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBasTheme.AddContent"
+        tools:context=".myclass.DialogFragmentAddBanner">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <LinearLayout
+                android:id="@+id/layoutDialogBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="4dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButtonBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    app:tint="@color/colorButtonPrimaryAction" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/padding_medium_8"
+                    android:text="Add New Banner"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/size_18sp" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorTransparent"
+                    android:src="@drawable/ic_baseline_close_24"
+                    app:tint="@color/colorButtonPrimaryAction" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_05dp"
+                android:layout_below="@+id/layoutDialogBar"
+                android:background="@color/colorPrimaryVariant" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/layoutButtons"
+                android:layout_below="@+id/view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <!-- Add Image View  -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        app:cardCornerRadius="@dimen/corner_small_4"
+                        app:cardElevation="@dimen/dimen_0dp">
+
+                        <ImageView
+                            android:id="@+id/imageViewImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorGray" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutAddImageBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_add_24"
+                                app:tint="@color/colorIconWhite" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="@dimen/padding_medium_8"
+                                android:text="Add Banner Image"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="@dimen/size_18sp" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Select Banner Type -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:id="@+id/inputLayoutSelectType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_medium_8"
+                        app:startIconDrawable="@drawable/ic_outline_style_type_24"
+                        app:startIconTint="@color/colorIconNormal"
+                        app:startIconContentDescription="City"
+                        android:hint="Select Banner Type">
+
+<!--                        <AutoCompleteTextView/>-->
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/autoCompleteSelectType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- Product ID View  -->
+                    <LinearLayout
+                        android:id="@+id/linearLayoutProductId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="@dimen/margin_medium_8">
+
+                        <!-- icon password with show and hide icon  -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/inputLayoutProductID"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="84"
+
+                            app:startIconDrawable="@drawable/ic_outline_tag_24"
+                            app:startIconTint="@color/colorIconNormal"
+                            app:startIconContentDescription="password"
+                            android:hint="Product ID"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/inputEditTextProductID"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textColor="@color/colorPrimary" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:text="Select"
+                            android:textColor="@color/colorTextOnPrimary"
+                            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+                            android:drawableTint="@color/colorIconOnPrimary"
+                            app:endIconMode="custom"
+                            android:backgroundTint="@color/colorButtonPrimary"/>
+
+                    </LinearLayout>
+
+                    <!-- Web Link URL  -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputLayoutWebUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_medium_8"
+
+                        app:startIconDrawable="@drawable/ic_baseline_language_web_24"
+                        app:startIconTint="@color/colorIconNormal"
+                        app:startIconContentDescription="password"
+                        android:hint="Web Link / URL"
+
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputEditTextUrl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="@color/colorPrimary" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- View to Add In App Promotional Banner information  -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewInAppPromo"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="vertical"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/layoutButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonChangeImage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:background="@color/colorBackgroundNormal"
+                    android:text="Change Banner"
+                    android:textColor="@color/colorSecondaryVariant" />
+
+                <Button
+                    android:id="@+id/buttonUpload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:background="@color/colorButtonSecondaryAction"
+                    android:text="Upload"
+                    android:textColor="@color/colorWhiteTextOnSecondary" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>
